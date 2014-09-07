@@ -1,1 +1,27 @@
-a
+<html>
+  
+  <head>
+    <meta charset="utf-8" />
+    <title>weibo callback</title>
+    
+  </head>
+  <body>
+    <script>
+      
+
+function getQueryString(name) {
+var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+var r = window.location.search.substr(1).match(reg);
+if (r != null) return unescape(r[2]); return null;
+}
+
+var code = getQueryString('code');
+var o = document.body;
+var a = document.createElement("a");
+a.href = 'locahost/yibuyiqu/weibosdk/callback.php?code=' + code;
+a.innerHTML = text;
+a.style.color = "red";
+o.appendChild(a); 
+    </script>
+  </body>
+</html>
